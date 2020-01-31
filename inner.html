@@ -22,7 +22,76 @@
       <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
-        <!--Здесь будет форма -->
+        <form action="https://echo.htmlacademy.ru" method="get" >
+          <fieldset class="filter-item">
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="pool" id="filter-pool" checked>
+                <label for="filter-pool">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking" id="filter-parking">
+                <label for="filter-parking">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                <label for="filter-wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-item">
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                <label for="filter-hotel">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" id="filter-motel" checked>
+                <label for="filter-motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="apartment" id="filter-apartment" checked>
+                <label for="filter-apartment">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-item">
+            <legend>Стоимость в сутки (Р):</legend>
+            <div class="range-filter">
+              <div class="price-controls">
+                <label class="min-price"><input name="min-price" type="text" value="От 0"></label>
+                <label class="max-price"><input name="max-price" type="text" value="До 3000"></label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+            </div>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+      </section>
+      <section class="sort">
+        <p class="sort-info">Найдено: 3</p>
+        <h2>Сортировка:</h2>
+        <div class="sort-wrapper">
+          <a class="sort-item sort-item-current" href="https://yandex.ru/search/?text=price&lr=2">По цене</a>
+          <a class="sort-item sort-item-type" href="https://yandex.ru/search/?text=character&lr=2">По типу</a>
+          <a class="sort-item sort-item-rating" href="https://yandex.ru/search/?text=rating&lr=2">По рейтингу</a>
+        </div>
+        <a class="sort-indicator-up" href="#">
+          <span class="visually-hidden">Сортировать по возрастанию</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+        </a>
+        <a class="sort-indicator-down sort-indicator-current" href="#">
+          <span class="visually-hidden">Сортировать по убыванию</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+        </a>
       </section>
       <article>
         <h2 class="visually-hidden">Гостиницы Седоны</h2>
