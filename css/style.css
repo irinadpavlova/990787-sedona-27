@@ -45,9 +45,11 @@ a {
   color: #766357;
 }
 
-.main-picture {
+.main-banner {
+  position: relative;
+
   width: 1200px;
-  height: 579px;
+  min-height: 725px;
 
   background-color: #ffffff;
   background-image: url("../img/background.jpg");
@@ -55,7 +57,16 @@ a {
   background-position: top center;
 }
 
-.heading {
+.main-text {
+  position: relative;
+  top: 566px;
+}
+
+.main-banner::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+
   width: 459px;
   height: 353px;
 
