@@ -7,13 +7,13 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <header class="main-header">
+  <body class="inner-page">
+    <header class="main-header container">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
           <img src="img/logo.svg" width="140" height="71" alt="Логотип компании по поиску жилья в Седоне «City of Sedona»">
         </a>
-        <ul class="site-navigation">
+        <ul class="site-navigation inner-site-navigation">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
@@ -60,23 +60,25 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-item">
-            <legend>Стоимость в сутки (Р):</legend>
-            <div class="range-filter">
-              <div class="price-controls">
-                <label class="min-price"><input name="min-price" type="text" value="От 0"></label>
-                <label class="max-price"><input name="max-price" type="text" value="До 3000"></label>
-              </div>
-              <div class="range-controls">
-                <div class="scale">
-                  <div class="bar"></div>
+          <div class="filter-column">
+            <fieldset class="filter-item">
+              <legend>Стоимость в сутки (Р):</legend>
+              <div class="range-filter">
+                <div class="price-controls">
+                  <label class="min-price"><input name="min-price" type="text" value="От 0"></label>
+                  <label class="max-price"><input name="max-price" type="text" value="До 3000"></label>
                 </div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
               </div>
-            </div>
-          </fieldset>
-          <button type="submit" class="button filters-button">Показать</button>
+            </fieldset>
+            <button type="submit" class="button filters-button">Показать</button>
+          </div>
         </form>
       </section>
       <section class="sort">
@@ -87,67 +89,75 @@
           <a class="sort-item sort-item-type" href="#">По типу</a>
           <a class="sort-item sort-item-rating" href="#">По рейтингу</a>
         </div>
-        <a class="sort-indicator sort-indicator-up" href="#">
-          <span class="visually-hidden">Сортировать по возрастанию</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path fill="#cacaca" d="M5.5 0L0 10h11z"/></svg>
-        </a>
-        <a class="sort-indicator sort-indicator-down sort-indicator-current" href="#">
-          <span class="visually-hidden">Сортировать по убыванию</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path fill="#cacaca" d="M5.5 0L0 10h11z"/></svg>
-        </a>
+        <div class="indicators">
+          <a class="sort-indicator sort-indicator-up" href="#">
+            <span class="visually-hidden">Сортировать по возрастанию</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path fill="#cacaca" d="M5.5 0L0 10h11z"/></svg>
+          </a>
+          <a class="sort-indicator sort-indicator-down sort-indicator-current" href="#">
+            <span class="visually-hidden">Сортировать по убыванию</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path fill="#cacaca" d="M5.5 0L0 10h11z"/></svg>
+          </a>
+        </div>
       </section>
       <article>
         <h2 class="visually-hidden">Гостиницы Седоны</h2>
         <ul class="hotels">
           <li class="hotels-item">
-            <h3>
-              <a class="hotel-name" href="#">Amara Resort & Spa</a>
-            </h3>
             <img src="img/amara.jpg" width="135" height="90" alt="Фотография гостиницы «Amara Resort & Spa»">
-            <table>
-              <tr>
-                <td>Гостиница</td>
-                <td>От 4000 Р.</td>
-              </tr>
-            </table>
-            <a class="button button-info" href="#">Подробнее</a>
-            <a class="button button-buy" href="#">Забронировать</a>
+            <div class="column-hotel">
+              <h3>
+                <a class="hotel-name" href="#">Amara Resort & Spa</a>
+              </h3>
+              <table>
+                <tr>
+                  <td>Гостиница</td>
+                  <td>От 4000 Р.</td>
+                </tr>
+              </table>
+              <a class="button button-info" href="#">Подробнее</a>
+              <a class="button button-buy" href="#">Забронировать</a>
+            </div>
             <div class="comfort">
               <span class="visually-hidden">Уровень сервиса четыре звезды</span>
               <span class="rating">Рейтинг: 8,5</span>
             </div>
           </li>
           <li class="hotels-item">
-            <h3>
-              <a class="hotel-name" href="#">Desert Quail Inn</a>
-            </h3>
             <img src="img/desert.jpg" width="135" height="90" alt="Фотография мотеля «Desert Quail Inn»">
-            <table>
-              <tr>
-                <td>Мотель</td>
-                <td>От 3000 Р.</td>
-              </tr>
-            </table>
-            <a class="button button-info" href="#">Подробнее</a>
-            <a class="button button-buy" href="#">Забронировать</a>
+            <div class="column-hotel">
+              <h3>
+                <a class="hotel-name" href="#">Desert Quail Inn</a>
+              </h3>
+              <table>
+                <tr>
+                  <td>Мотель</td>
+                  <td>От 3000 Р.</td>
+                </tr>
+              </table>
+              <a class="button button-info" href="#">Подробнее</a>
+              <a class="button button-buy" href="#">Забронировать</a>
+            </div>
             <div class="comfort">
               <span class="visually-hidden">Уровень сервиса три звезды</span>
               <span class="rating">Рейтинг: 8,9</span>
             </div>
           </li>
           <li class="hotels-item">
-            <h3>
-              <a class="hotel-name" href="#">Villas at Poco Diablo</a>
-            </h3>
             <img src="img/villas.jpg" width="135" height="90" alt="Фотография гостиницы «Amara Resort & Spa»">
-            <table>
-              <tr>
-                <td>Апартаменты</td>
-                <td>От 2000 Р.</td>
-              </tr>
-            </table>
-            <a class="button button-info" href="#">Подробнее</a>
-            <a class="button button-buy" href="#">Забронировать</a>
+            <div class="column-hotel">
+              <h3>
+                <a class="hotel-name" href="#">Villas at Poco Diablo</a>
+              </h3>
+              <table>
+                <tr>
+                  <td>Апартаменты</td>
+                  <td>От 2000 Р.</td>
+                </tr>
+              </table>
+              <a class="button button-info" href="#">Подробнее</a>
+              <a class="button button-buy" href="#">Забронировать</a>
+            </div>
             <div class="comfort">
               <span class="visually-hidden">Уровень сервиса две звезды</span>
               <span class="rating">Рейтинг: 9,2</span>
@@ -156,7 +166,7 @@
         </ul>
       </article>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <p class="footer-contacts">
         #visitsedona<br>
         Телефон: <a href="tel:+78126660266">+7 (812) 666-02-66</a>
