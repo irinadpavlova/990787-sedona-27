@@ -170,7 +170,8 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.index-column {
+.index-column,
+.devils-bridge {
   display: flex;
   color: #ffffff;
 }
@@ -323,7 +324,7 @@ input[type="radio"].visually-hidden {
 .main-footer {
   position: absolute;
   z-index: 1;
-  top: 495px;
+  top: 505px;
   left: 10px;
   opacity: 0.9;
   background-color: #ffffff;
@@ -344,6 +345,58 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.social-button {
+  display: block;
+  position: relative;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+}
+
+.main-footer .footer-social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social li {
+  margin-right: 6px;
+}
+
+.footer-social li:last-child {
+  margin-right: 0;
+}
+/*
+.social-button-tw {
+  background-image: url(../img/tw-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+} */
+
+.social-button::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.social-button-tw::before {
+  width: 15px;
+  height: 18px;
+  background-image: url(../img/tw-icon.svg);
+}
+
+.social-button-fb::before {
+  width: 12px;
+  height: 22px;
+  background-image: url(../img/fb-icon.svg);
+}
+
+.social-button-youtube::before {
+  width: 20px;
+  height: 16px;
+  background-image: url(../img/youtube-icon.svg);
+}
+
 .html-academy {
   width: 115px;
   height: 41px;
@@ -362,13 +415,23 @@ input[type="radio"].visually-hidden {
   background-color: #81b3d2;
 }
 
-.footer-social a:hover,
-.footer-social a:focus {
+.footer-social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-button:hover,
+.social-button:focus {
   background-color: #669ec0;
 }
 
-.footer-social a:active {
+.social-button:active {
   background-color: #5496bd;
+}
+
+.social-button:active::before {
+  opacity: 0.3;
 }
 
 .footer-social {
