@@ -114,13 +114,14 @@ input[type="radio"].visually-hidden {
 }
 
 .mountains-bg {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 1200px;
   height: 510px;
 
-  background: url("../img/intro-mask.svg") no-repeat center 453px,
+  background: url("../img/intro-mask.svg") no-repeat bottom center,
   url("../img/background.jpg") no-repeat top center;
   background-color: #ffffff;
   background-size: 100%;
@@ -138,11 +139,11 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-/* .main-banner::before {
+/* .mountains-bg::before {
   content: "";
   position: absolute;
-  top: 454px;
-  left: 30px;
+  bottom: 0;
+  left: 0;
   z-index: 1;
 
   width: 1203px;
