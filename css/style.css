@@ -301,11 +301,6 @@ input[type="radio"].visually-hidden {
   background-color: #eeeeee;
 }
 
-.last-advantage:nth-child(4) {
-  padding-right: 68px;
-  padding-left: 68px;
-}
-
 .last-advantage h3 {
   padding-bottom: 23px;
 }
@@ -688,6 +683,7 @@ input[type="radio"].visually-hidden {
 
 .inner-page .button {
   display: inline-block;
+  vertical-align: top;
   margin-right: 3px;
   padding: 3px 17px;
 
@@ -1099,11 +1095,15 @@ input[type="radio"].visually-hidden {
   background-repeat: space;
 }
 
-.hotels-item:nth-child(2) .comfort::before {
+.hotels-item .four-stars::before {
+  width: 89px;
+}
+
+.hotels-item .three-stars::before {
   width: 63px;
 }
 
-.hotels-item:last-child .comfort::before {
+.hotels-item .two-stars::before {
   width: 40px;
 }
 
