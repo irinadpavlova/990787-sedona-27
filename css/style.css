@@ -301,6 +301,11 @@ input[type="radio"].visually-hidden {
   background-color: #eeeeee;
 }
 
+.features-item:nth-child(4) {
+  padding-left: 63px;
+  padding-right: 63px;
+}
+
 .last-advantage h3 {
   padding-bottom: 23px;
 }
@@ -460,10 +465,10 @@ input[type="radio"].visually-hidden {
 .amount .increase::after {
   content: "";
   position: absolute;
-  top: 13.5px;
+  top: 13px;
   left: 18px;
-  width: 2px;
-  height: 11px;
+  width: 3px;
+  height: 12px;
   background-color: #a9a9a9;
 }
 
@@ -536,8 +541,7 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.main-footer p,
-.main-footer ul {
+.main-footer p {
   margin: 0;
   padding: 0;
 
@@ -558,8 +562,7 @@ input[type="radio"].visually-hidden {
   min-height: 120px;
 }
 
-.main-footer p,
-.main-footer ul {
+.main-footer p {
   width: 400px;
   text-align: center;
 }
@@ -588,15 +591,21 @@ input[type="radio"].visually-hidden {
 }
 
 .main-footer .footer-social {
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 152px;
 }
 
 .footer-social li {
+  margin-bottom: 3px;
   margin-right: 6px;
+  margin-top: 3px;
 }
 
-.footer-social li:last-child {
+.footer-social li:nth-child(3n) {
   margin-right: 0;
 }
 
