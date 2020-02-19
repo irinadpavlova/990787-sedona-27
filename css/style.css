@@ -8,6 +8,7 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   color: #333333;
   text-transform: uppercase;
+
   background-color: #f2f2f2;
 }
 
@@ -26,7 +27,7 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active),
+.visually-hidden,
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
@@ -34,14 +35,15 @@ input[type="radio"].visually-hidden {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  overflow: hidden;
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  border: 0;
+
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  clip-path: inset(100%);
 }
 
 .container {
@@ -50,13 +52,11 @@ input[type="radio"].visually-hidden {
   padding: 0 0;
 
   background-color: #ffffff;
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .main-navigation {
   position: relative;
-
-  display: flex;
 
   font-weight: 700;
   line-height: 26px;
@@ -69,19 +69,19 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 0;
   left: 50%;
-  margin-left: -70px;
   z-index: 1;
 
   display: block;
   width: 140px;
   height: 71px;
+  margin-left: -70px;
 }
 
 .site-navigation {
-  width: 1200px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1200px;
   margin: 0;
   padding: 0;
   padding-right: 72px;
@@ -92,8 +92,8 @@ input[type="radio"].visually-hidden {
 
 .site-navigation li {
   width: 239px;
-  padding-top: 13px;
-  padding-bottom: 17px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   color: inherit;
 }
@@ -102,9 +102,13 @@ input[type="radio"].visually-hidden {
   margin-right: auto;
 }
 
-.site-navigation li:nth-last-child(2),
-.site-navigation li:last-child {
+.site-navigation li:nth-child(4n-1),
+.site-navigation li:nth-child(4n) {
   text-align: right;
+}
+
+.site-navigation .navigation-map {
+  padding-right: 6px;
 }
 
 .site-navigation a {
@@ -126,6 +130,7 @@ input[type="radio"].visually-hidden {
 
 .mountains-bg {
   position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,10 +147,10 @@ input[type="radio"].visually-hidden {
 }
 
 .main-text {
-  width: 489px;
-  padding-top: 59px;
-  padding-bottom: 51px;
+  width: 492px;
   margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 51px;
 
   text-align: center;
 }
@@ -156,6 +161,7 @@ input[type="radio"].visually-hidden {
   bottom: -3px;
   left: 0;
   z-index: 1;
+
   width: 1200px;
   height: 59px;
 
@@ -174,8 +180,10 @@ input[type="radio"].visually-hidden {
 .main-text p {
   margin: 0;
   padding: 0;
-  padding-top: 29px;
+  padding-top: 28px;
+
   line-height: 26px;
+  text-align: left;
 }
 
 .features-list {
@@ -184,6 +192,7 @@ input[type="radio"].visually-hidden {
 
 .devils-bridge {
   display: flex;
+
   color: #ffffff;
 }
 
@@ -195,10 +204,11 @@ input[type="radio"].visually-hidden {
 .real-life,
 .about-bridge {
   width: 400px;
-  padding-top: 46px;
+  padding-top: 47px;
   padding-right: 60px;
   padding-bottom: 60px;
-  padding-left: 60px;
+  padding-left: 56px;
+
   color: #ffffff;
 
   background-color: #81b3d2;
@@ -218,10 +228,10 @@ input[type="radio"].visually-hidden {
 }
 
 .features-item h3 {
-  margin: 0;
-  padding: 0;
   width: 150px;
+  margin: 0;
   margin: 0 auto;
+  padding: 0;
   padding-bottom: 26px;
 
   font-size: 21px;
@@ -239,6 +249,11 @@ input[type="radio"].visually-hidden {
   padding-bottom: 22px;
 }
 
+.real-life .number,
+.about-bridge .number {
+  padding-bottom: 20px;
+}
+
 .city-features {
   display: flex;
   justify-content: space-between;
@@ -246,7 +261,6 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   list-style: none;
-  color: #333333;
 
   background-color: #ffffff;
 }
@@ -293,21 +307,23 @@ input[type="radio"].visually-hidden {
 .last-advantage {
   width: 400px;
   min-height: 256px;
-
   padding-top: 48px;
   padding-right: 75px;
   padding-bottom: 20px;
   padding-left: 75px;
+
   background-color: #eeeeee;
 }
 
 .features-item:nth-child(4) {
-  padding-left: 63px;
   padding-right: 63px;
+  padding-left: 63px;
 }
 
 .last-advantage h3 {
   padding-bottom: 23px;
+
+  color: #000000;
 }
 
 .features {
@@ -317,20 +333,20 @@ input[type="radio"].visually-hidden {
 .search-hotels h2 {
   margin: 0;
   padding: 0;
-  font-size: 30px;
-  line-height: 36px;
-  color: #000000;
   padding-bottom: 24px;
 
+  font-size: 30px;
+  line-height: 36px;
   text-align: center;
+  color: #000000;
 }
 
 .search-hotels p {
   margin: 0;
   padding: 0;
-  line-height: 24px;
   padding-bottom: 47px;
 
+  line-height: 24px;
   text-align: center;
 }
 
@@ -363,61 +379,91 @@ input[type="radio"].visually-hidden {
 .search-hotels .button {
   display: block;
   width: 568px;
-  padding: 30px 100px;
   margin: 0 auto;
+  padding: 30px 100px;
+
   font-size: 21px;
   line-height: 26px;
 }
 
 .form-hotels {
   position: absolute;
-  z-index: 1;
   left: 50%;
+  z-index: 1;
+
   width: 568px;
-  margin-left: -284px;
   min-height: 395px;
+  margin-left: -284px;
   padding: 55px;
 
   background-color: #ffffff;
-  box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
 .form-hotels label {
   font-weight: bold;
   line-height: 1.86;
-
   text-align: left;
   color: #000000;
 }
 
 .form-hotels p {
   position: relative;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
-  line-height: 1.86;
+  align-items: center;
   padding-bottom: 28px;
+
+  line-height: 1.86;
 }
 
 .form-hotels input {
   width: 346px;
   height: 38px;
   padding: 13px;
-  background-color: #f2f2f2;
 
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 14px;
   font-weight: bold;
+  font-size: 14px;
   line-height: 1.86;
+  font-family: "PT Sans", Arial, sans-serif;
   text-align: left;
   color: #000000;
-  border: none;
   text-transform: uppercase;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .form-hotels input {
+    line-height: 0.86;
+  }
+
+  .form-hotels input::-ms-clear {
+    display: none;
+    width : 0;
+    height: 0;
+  }
+
+  .form-hotels input::-ms-reveal {
+    display: none;
+    width : 0;
+    height: 0;
+  }
+
+  .form-hotels .arrival-date {
+    width: 91px;
+  }
+
+  .form-hotels .departure-date {
+    width: 95px;
+  }
 }
 
 .form-hotels p:nth-child(2) {
-  padding-bottom: 31px;
+  padding-bottom: 30px;
 }
 
 .amount-columns {
@@ -429,13 +475,15 @@ input[type="radio"].visually-hidden {
 
 .form-hotels .amount {
   position: relative;
+
   width: 189px;
 }
 
 .amount input {
   width: 38px;
-  padding-left: 5px;
   padding-right: 5px;
+  padding-left: 5px;
+
   text-align: center;
 }
 
@@ -448,10 +496,12 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 0;
   left: 113px;
+
   width: 38px;
   height: 38px;
-  border: none;
+
   background-color: #f2f2f2;
+  border: none;
 }
 
 .amount:nth-child(2) .amount-button {
@@ -471,8 +521,10 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 13px;
   left: 18px;
+
   width: 3px;
   height: 12px;
+
   background-color: #a9a9a9;
 }
 
@@ -496,6 +548,7 @@ input[type="radio"].visually-hidden {
 .reduce::before {
   top: 17px;
   left: 12px;
+
   width: 12px;
   height: 3px;
 }
@@ -503,6 +556,7 @@ input[type="radio"].visually-hidden {
 .increase::before {
   top: 17px;
   left: 14px;
+
   width: 11px;
   height: 3px;
 }
@@ -510,9 +564,10 @@ input[type="radio"].visually-hidden {
 .form-hotels .icon-calendar {
   position: absolute;
   top: 6px;
-  right: 2px;
-  border: none;
+  right: 3px;
+
   background-color: transparent;
+  border: none;
 }
 
 .icon-calendar:hover path {
@@ -526,10 +581,12 @@ input[type="radio"].visually-hidden {
 .form-hotels .button {
   width: 100%;
   min-height: 58px;
-  line-height: 26px;
-  background-color: #81b3d2;
   padding-top: 16px;
   padding-bottom: 16px;
+
+  line-height: 26px;
+
+  background-color: #81b3d2;
   border: none;
 }
 
@@ -546,33 +603,45 @@ input[type="radio"].visually-hidden {
 }
 
 .main-footer p {
+  width: 400px;
   margin: 0;
   padding: 0;
-
-  width: 400px;
 }
 
 .main-footer {
   position: absolute;
-  z-index: 1;
-  width: 1200px;
   bottom: 5px;
   left: 0;
-  opacity: 0.9;
-  background-color: #ffffff;
+  z-index: 1;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 1200px;
   min-height: 120px;
+
+  background-color: #ffffff;
+  opacity: 0.9;
 }
+
+.main-footer::after {
+  content: "";
+
+  min-height: inherit;
+
+  font-size: 0;
+}
+
 
 .main-footer p {
   width: 400px;
+
   text-align: center;
 }
 
 .main-footer .footer-contacts {
   padding-left: 123px;
+
   text-align: left;
 }
 
@@ -592,26 +661,31 @@ input[type="radio"].visually-hidden {
 }
 
 .social-button {
-  display: block;
   position: relative;
+
+  display: block;
   width: 46px;
   height: 48px;
+
   background-color: #81b3d2;
 }
 
 .main-footer .footer-social {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 152px;
+  width: 400px;
+  margin: 0;
+  padding: 0;
+  padding-top: 0px;
+  padding-right: 124px;
+  padding-left: 124px;
 }
 
 .footer-social li {
-  margin-bottom: 3px;
-  margin-right: 6px;
   margin-top: 3px;
+  margin-right: 6px;
+  margin-bottom: 3px;
 }
 
 .footer-social li:nth-child(3n) {
@@ -621,6 +695,11 @@ input[type="radio"].visually-hidden {
 .social-button::before {
   content: "";
   position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -628,18 +707,21 @@ input[type="radio"].visually-hidden {
 .social-button-tw::before {
   width: 15px;
   height: 18px;
+
   background-image: url(../img/tw-icon.svg);
 }
 
 .social-button-fb::before {
   width: 12px;
   height: 22px;
+
   background-image: url(../img/fb-icon.svg);
 }
 
 .social-button-youtube::before {
   width: 20px;
   height: 16px;
+
   background-image: url(../img/youtube-icon.svg);
 }
 
@@ -649,9 +731,10 @@ input[type="radio"].visually-hidden {
 }
 
 .logo-html {
-  vertical-align: middle;
   display: inline-block;
   padding-left: 5px;
+
+  vertical-align: middle;
 }
 
 .logo-html:hover path,
@@ -665,12 +748,6 @@ input[type="radio"].visually-hidden {
 
 .footer-social a {
   background-color: #81b3d2;
-}
-
-.footer-social a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .social-button:hover,
@@ -701,13 +778,16 @@ input[type="radio"].visually-hidden {
 
 .inner-page .button {
   display: inline-block;
-  vertical-align: top;
-  margin-right: 3px;
-  padding: 3px 17px;
-
   max-width: 250px;
+  margin-right: 3px;
+  padding-top: 2px;
+  padding-right: 16px;
+  padding-bottom: 4px;
+  padding-left: 17px;
+
   font: inherit;
   font-weight: 700;
+  vertical-align: top;
   text-align: center;
 
   background-color: #81b3d2;
@@ -725,30 +805,29 @@ input[type="radio"].visually-hidden {
 
 .button.disabled,
 .button:disabled {
+  background-color: #000000;
   cursor: default;
   opacity: 0.5;
-  background-color: #000000;
 }
 
 .filters {
-  color: #ffffff;
-
-  min-height: 217px;
   width: 100%;
+  min-height: 217px;
+  padding-top: 28px;
+
+  color: #ffffff;
 
   background-color: #6688ae;
   background-image: url("../img/filter-background.jpg");
-
-  padding-top: 28px;
-
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 .filter-item legend {
-  font-size: 16px;
+  margin-bottom: 24px;
+
   font-weight: 700;
-  margin-bottom: 26px;
+  font-size: 16px;
 }
 
 .filter-item {
@@ -758,12 +837,13 @@ input[type="radio"].visually-hidden {
 .filter-item ul {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .filter-item li {
   margin-bottom: 25px;
-  padding-left: 40px;
+  padding-left: 39px;
 }
 
 .filter-item label {
@@ -772,13 +852,14 @@ input[type="radio"].visually-hidden {
   display: block;
 
   cursor: pointer;
+
   user-select: none;
 }
 
 .filter-input + label::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   left: -40px;
 
   width: 23px;
@@ -789,7 +870,6 @@ input[type="radio"].visually-hidden {
 
 .filter-input:checked + label::after {
   content: "";
-
   position: absolute;
   top: 0;
   left: -40px;
@@ -803,7 +883,7 @@ input[type="radio"].visually-hidden {
 .filter-input:disabled + label::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   left: -40px;
 
   width: 23px;
@@ -815,7 +895,7 @@ input[type="radio"].visually-hidden {
 .filter-input:disabled:checked + label::after {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   left: -40px;
 
   width: 23px;
@@ -825,17 +905,19 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-column .filter-item {
-  width: 316px;
+  width: 318px;
 }
 
 .filter-column legend {
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 }
 
 .price-controls {
   position: relative;
+
   height: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
+
   font-size: 0;
 
   border: 2px solid #ffffff;
@@ -856,34 +938,34 @@ input[type="radio"].visually-hidden {
 }
 
 .price-controls input {
+  width: 62px;
+  margin: 0;
+  padding-left: 3px;
+
+  font: inherit;
   font-size: 14px;
   line-height: 21px;
   text-align: left;
-  padding-left: 3px;
   color: #ffffff;
-
-  background-color: transparent;
-  width: 62px;
-  margin: 0;
-
   color: inherit;
-  font: inherit;
 
   background: none;
+  background-color: transparent;
   border: none;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
   width: 147px;
-  padding-left: 61px;
+  padding-top: 4px;
+  padding-left: 64px;
 }
 
 .price-controls label {
   display: inline-block;
 
   font-size: 14px;
-  line-height: 32px;
+  line-height: 21px;
   vertical-align: top;
 
   cursor: pointer;
@@ -914,8 +996,8 @@ input[type="radio"].visually-hidden {
 
   width: 20px;
   height: 20px;
-
   padding: 0;
+
   background-color: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
@@ -928,7 +1010,7 @@ input[type="radio"].visually-hidden {
 }
 
 .toggle-max {
-  left: 80%;
+  left: 79%;
 }
 
 .toggle:hover,
@@ -937,12 +1019,14 @@ input[type="radio"].visually-hidden {
 }
 
 .filters .filters-button {
+  width: 138px;
+  margin-left: 84px;
+  padding-top: 5px;
+  padding-bottom: 6px;
+
   font-weight: 400;
-  width: 136px;
-  margin-left: 83px;
-  padding-top: 0;
-  padding-bottom: 0;
-  line-height: 32px;
+  line-height: 21px;
+
   background-color: transparent;
   border: 2px solid #ffffff;
 }
@@ -963,13 +1047,14 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-  padding-top: 30px;
-  font-size: 12px;
   min-height: 86px;
-  line-height: 18px;
-  color: #000000;
+  padding-top: 29px;
   padding-right: 72px;
   padding-left: 72px;
+
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
 
   background-color: #fefefe;
 }
@@ -985,9 +1070,11 @@ input[type="radio"].visually-hidden {
 }
 
 .sort h2 {
+  margin-right: 40px;
+
+  font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  margin-right: 40px;
 }
 
 .sort .sort-item {
@@ -1068,34 +1155,38 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  border-top: 1px solid #e5e5e5;
-  padding-top: 26px;
+  padding-top: 25px;
   padding-right: 72px;
-  padding-bottom: 28px;
+  padding-bottom: 29px;
   padding-left: 72px;
+
+  border-top: 1px solid #e5e5e5;
 }
 
 .hotels li:last-child {
+  padding-bottom: 30px;
+
   border-bottom: 1px solid #e5e5e5;
 }
 
 .hotels h3 {
   margin: 0;
-  padding: 0;
   margin-bottom: 6px;
+  padding: 0;
 }
 
 .hotels img {
   width: 135px;
   height: 90px;
-  margin-top: 5px;
-  margin-right: 30px;
+  margin-top: 4px;
+  margin-right: 29px;
 }
 
 .hotels .comfort {
   position: relative;
-  margin-left: auto;
+
   margin-top: 4px;
+  margin-left: auto;
   padding-top: 64px;
 }
 
@@ -1104,10 +1195,10 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 0;
   right: 0;
-  width: 89px;
-  height: 17px;
   z-index: 1;
 
+  width: 89px;
+  height: 17px;
 
   background-image: url(../img/star.svg);
   background-repeat: space;
@@ -1118,11 +1209,11 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels-item .three-stars::before {
-  width: 63px;
+  width: 66px;
 }
 
 .hotels-item .two-stars::before {
-  width: 40px;
+  width: 42px;
 }
 
 .hotel-name {
@@ -1138,8 +1229,9 @@ input[type="radio"].visually-hidden {
 
 .column-hotel table {
   width: 232px;
-  border-spacing: 0;
   margin-bottom: 14px;
+
+  border-spacing: 0;
 }
 
 .hotels-item td {
@@ -1152,8 +1244,13 @@ input[type="radio"].visually-hidden {
 
 .rating {
   display: block;
-  padding: 4px 14px;;
+  padding-top: 3px;
+  padding-right: 13px;
+  padding-bottom: 4px;
+  padding-left: 13px;
+
   color: #666666;
+
   background-color: #f2f2f2;
 }
 
@@ -1178,16 +1275,17 @@ input[type="radio"].visually-hidden {
 
 .filters fieldset {
   width: 255px;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .filter-column {
-  width: 316px;
+  width: 318px;
   margin-left: auto;
 }
 
 .inner-page .main-footer {
   position: static;
+
   background-color: #ffffff;
 }
