@@ -9,13 +9,16 @@ link.addEventListener("click", function (evt) {
   arrival.focus();
   if (popup.classList.contains("modal")) {
     popup.classList.add("modal-show");
+    popup.classList.remove("modal-error");
   }
 });
 
 popup.addEventListener("submit", function (evt) {
   if (!arrival.value || !departure.value) {
     evt.preventDefault();
-    console.log("Нужно ввести дату заезда и выезда");
+    popup.classList.remove("modal-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("modal-error");
   }
 });
 
@@ -25,6 +28,7 @@ window.addEventListener("keydown", function (evt) {
     popup.classList.remove("modal");
     if (!popup.classList.contains("modal")) {
       popup.classList.add("modal");
+      popup.classList.remove("modal-error");
     }
   }
 });

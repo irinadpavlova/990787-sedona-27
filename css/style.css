@@ -230,10 +230,9 @@ input[type="radio"].visually-hidden {
 
 .features-item h3 {
   width: 150px;
-  margin: 0;
   margin: 0 auto;
   padding: 0;
-  padding-bottom: 26px;
+  padding-bottom: 23px;
 
   font-size: 21px;
   text-align: center;
@@ -308,7 +307,7 @@ input[type="radio"].visually-hidden {
 .last-advantage {
   width: 400px;
   min-height: 256px;
-  padding-top: 48px;
+  padding-top: 46px;
   padding-right: 75px;
   padding-bottom: 20px;
   padding-left: 75px;
@@ -328,10 +327,15 @@ input[type="radio"].visually-hidden {
 }
 
 .features {
-  margin-bottom: 51px;
+  position: relative;
+  z-index: 4;
+  padding-bottom: 49px;
+  background-color: #ffffff;
 }
 
 .search-hotels h2 {
+  position: relative;
+  z-index: 4;
   margin: 0;
   padding: 0;
   padding-bottom: 24px;
@@ -340,15 +344,19 @@ input[type="radio"].visually-hidden {
   line-height: 36px;
   text-align: center;
   color: #000000;
+  background-color: #ffffff;
 }
 
 .search-hotels p {
+  position: relative;
+  z-index: 4;
   margin: 0;
   padding: 0;
   padding-bottom: 47px;
 
   line-height: 24px;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .search-hotels {
@@ -379,7 +387,7 @@ input[type="radio"].visually-hidden {
 
 .search-hotels .button {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   display: block;
   width: 568px;
   margin: 0 auto;
@@ -392,7 +400,7 @@ input[type="radio"].visually-hidden {
 .form-hotels {
   position: absolute;
   left: 50%;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   flex-wrap: wrap;
 
@@ -414,11 +422,11 @@ input[type="radio"].visually-hidden {
 
 .form-hotels .children {
   padding-left: 51px;
+  padding-right: 28px;
 }
 
-.form-hotels p {
-  position: relative;
-
+.form-hotels .arrival-item,
+.form-hotels .departure-item {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -428,12 +436,16 @@ input[type="radio"].visually-hidden {
   width: 458px;
 }
 
+.form-hotels .input-wrapper {
+  position: relative;
+}
+
 .amount .adult {
-  padding-right: 35px;
+  padding-right: 41px;
 }
 
 .form-hotels .arrival-item {
-  padding-bottom: 24px;
+  padding-bottom: 28px;
 }
 
 .form-hotels .departure-item {
@@ -443,15 +455,14 @@ input[type="radio"].visually-hidden {
 .form-hotels input {
   width: 346px;
   height: 38px;
-  padding: 13px;
-  padding-top: 0;
-  padding-bottom: 0;
-  line-height: 38px;
-  vertical-align: middle;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 13px;
+  padding-right: 13px;
+  line-height: 1.86;
 
   font-weight: bold;
   font-size: 14px;
-  /* line-height: 1.86; */
   font-family: "PT Sans", Arial, sans-serif;
   text-align: left;
   color: #000000;
@@ -462,10 +473,9 @@ input[type="radio"].visually-hidden {
 }
 
 .form-hotels .amount {
-  position: relative;
-
+  display: flex;
   width: 229px;
-  padding-bottom: 51px;
+  padding-bottom: 55px;
 }
 
 .form-hotels .arrival {
@@ -477,18 +487,22 @@ input[type="radio"].visually-hidden {
 }
 
 .amount input {
-  width: 119px;
-  padding-right: 43px;
-  padding-left: 43px;
+  width: 113px;
+  padding-right: 40px;
+  padding-left: 40px;
 
   text-align: center;
+}
+
+.amount label {
+  padding-top: 5px;
 }
 
 
 .form-hotels .amount-button {
   position: absolute;
-  top: 1px;
-  left: 113px;
+  top: 0;
+  left: 0;
 
   width: 38px;
   height: 38px;
@@ -497,16 +511,8 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
-.amount:nth-child(2) .amount-button {
-  left: 65px;
-}
-
-.amount:nth-child(2) .increase {
-  left: 140px;
-}
-
 .amount .increase {
-  left: 188px;
+  left: 75px;
 }
 
 .amount .increase::after {
@@ -601,14 +607,14 @@ input[type="radio"].visually-hidden {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 1200px;
   padding-top: 32px;
-  padding-bottom: 35px;
+  padding-bottom: 36px;
   min-height: 120px;
 
   background-color: #ffffff;
@@ -676,7 +682,6 @@ input[type="radio"].visually-hidden {
 
 .social-button::before {
   content: "";
-  position: absolute;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -992,7 +997,7 @@ input[type="radio"].visually-hidden {
 }
 
 .toggle-max {
-  left: 79%;
+  left: 80%;
 }
 
 .toggle:hover,
@@ -1277,12 +1282,12 @@ input[type="radio"].visually-hidden {
     transform: translateY(-395px);
   }
 
-  70% {
+  50% {
     transform: translateY(-200px);
   }
 
   90% {
-    transform: translateY(-100px);
+    transform: translateY(-50px);
   }
 
   100% {
@@ -1290,10 +1295,48 @@ input[type="radio"].visually-hidden {
   }
 }
 
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-show {
-  animation: bounce 0.6s;
+  animation: bounce 0.5s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal {
   display: none;
+}
+
+.map {
+  position: relative;
+}
+
+.map .google-map {
+  position: absolute;
+  z-index: 2;
+  width: 1200px;
+  height: 593px;
+  border: none;
 }
