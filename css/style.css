@@ -48,6 +48,7 @@ input[type="radio"].visually-hidden {
 
 .container {
   position: relative;
+
   width: 1200px;
   margin: 0 auto;
   padding: 0 0;
@@ -195,11 +196,20 @@ input[type="radio"].visually-hidden {
   display: flex;
 
   color: #ffffff;
+
+  background-color: #81b3d2;
 }
 
 .real-city {
   display: flex;
   flex-wrap: wrap;
+
+  background-color: #81b3d2;
+}
+
+.real-city img {
+  width: 800px;
+  height: 256px;
 }
 
 .real-life,
@@ -304,6 +314,11 @@ input[type="radio"].visually-hidden {
   padding-bottom: 20px;
 }
 
+.devils-bridge img {
+  width: 800px;
+  height: 256px;
+}
+
 .last-advantage {
   width: 400px;
   min-height: 256px;
@@ -329,13 +344,16 @@ input[type="radio"].visually-hidden {
 .features {
   position: relative;
   z-index: 4;
+
   padding-bottom: 49px;
+
   background-color: #ffffff;
 }
 
 .search-hotels h2 {
   position: relative;
   z-index: 4;
+
   margin: 0;
   padding: 0;
   padding-bottom: 24px;
@@ -344,18 +362,21 @@ input[type="radio"].visually-hidden {
   line-height: 36px;
   text-align: center;
   color: #000000;
+
   background-color: #ffffff;
 }
 
 .search-hotels p {
   position: relative;
   z-index: 4;
+
   margin: 0;
   padding: 0;
   padding-bottom: 47px;
 
   line-height: 24px;
   text-align: center;
+
   background-color: #ffffff;
 }
 
@@ -388,6 +409,7 @@ input[type="radio"].visually-hidden {
 .search-hotels .button {
   position: relative;
   z-index: 4;
+
   display: block;
   width: 568px;
   margin: 0 auto;
@@ -401,9 +423,9 @@ input[type="radio"].visually-hidden {
   position: absolute;
   left: 50%;
   z-index: 3;
+
   display: flex;
   flex-wrap: wrap;
-
   width: 568px;
   min-height: 395px;
   margin-left: -284px;
@@ -421,8 +443,8 @@ input[type="radio"].visually-hidden {
 }
 
 .form-hotels .children {
-  padding-left: 51px;
   padding-right: 28px;
+  padding-left: 51px;
 }
 
 .form-hotels .arrival-item,
@@ -431,9 +453,9 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 458px;
 
   line-height: 1.86;
-  width: 458px;
 }
 
 .form-hotels .input-wrapper {
@@ -456,13 +478,13 @@ input[type="radio"].visually-hidden {
   width: 346px;
   height: 38px;
   padding-top: 6px;
+  padding-right: 13px;
   padding-bottom: 6px;
   padding-left: 13px;
-  padding-right: 13px;
-  line-height: 1.86;
 
   font-weight: bold;
   font-size: 14px;
+  line-height: 1.86;
   font-family: "PT Sans", Arial, sans-serif;
   text-align: left;
   color: #000000;
@@ -613,9 +635,9 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   align-items: center;
   width: 1200px;
+  min-height: 120px;
   padding-top: 32px;
   padding-bottom: 36px;
-  min-height: 120px;
 
   background-color: #ffffff;
   opacity: 0.9;
@@ -665,7 +687,7 @@ input[type="radio"].visually-hidden {
   width: 400px;
   margin: 0;
   padding: 0;
-  padding-top: 0px;
+  padding-top: 0;
   padding-right: 124px;
   padding-left: 124px;
 }
@@ -683,12 +705,12 @@ input[type="radio"].visually-hidden {
 .social-button::before {
   content: "";
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  left: 50%;
 
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  transform: translate(-50%, -50%);
 }
 
 .social-button-tw::before {
@@ -808,6 +830,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/filter-background.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: cover;
 }
 
 .filter-item legend {
@@ -830,7 +853,7 @@ input[type="radio"].visually-hidden {
 
 .filter-item li {
   margin-bottom: 25px;
-  padding-left: 39px;
+  padding-left: 40px;
 }
 
 .filter-item label {
@@ -1157,6 +1180,7 @@ input[type="radio"].visually-hidden {
 }
 
 .hotels h3 {
+  max-width: 400px;
   margin: 0;
   margin-bottom: 6px;
   padding: 0;
@@ -1336,7 +1360,9 @@ input[type="radio"].visually-hidden {
 .map .google-map {
   position: absolute;
   z-index: 2;
+
   width: 1200px;
   height: 593px;
+
   border: none;
 }
